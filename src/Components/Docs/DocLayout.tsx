@@ -15,7 +15,7 @@ function DocLayout() {
           <Card title="Created by Me" description="Docs Created by you will be shown here." />
         </div>
         <div className="w-full rounded-xl border-[1px] border-gray-200 p-4 ">
-          <div className="flex flex-row justify-between items-center my-4">
+          <div className="flex flex-row gap-1 justify-between items-center my-4">
             <p className="font-semibold"> Create first wiki</p>
             <p className="text-xs text-gray-600">
               Use wikis to organize information, and prioritize it as results when you Ask AI. You can

@@ -57,6 +57,14 @@ const Sidebar = () => {
           <NavLink
             to="/home"
             className="w-auto flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    backgroundColor: '#e5e4fc',
+                    color: '#6A64D1',
+                  }
+                : {}
+            }
           >
             <Home size={20} strokeWidth="2" />
             {isCollapsed ? null : <p>Home</p>}
@@ -64,6 +72,14 @@ const Sidebar = () => {
           <NavLink
             to="/inbox"
             className="w-full flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    backgroundColor: '#e5e4fc',
+                    color: '#6A64D1',
+                  }
+                : {}
+            }
           >
             <Inbox size={20} strokeWidth="2" />
             {isCollapsed ? null : <p>Inbox</p>}
@@ -71,6 +87,14 @@ const Sidebar = () => {
           <NavLink
             to="/docs"
             className="w-full flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    backgroundColor: '#e5e4fc',
+                    color: '#6A64D1',
+                  }
+                : {}
+            }
           >
             <File size={20} strokeWidth="2" />
             {isCollapsed ? null : <p>Docs</p>}
@@ -79,6 +103,14 @@ const Sidebar = () => {
             to="/Dashboard"
             className="w-full flex items-center justify-sta   <DropdownMenuLabel>My Account</DropdownMenuLabel>
     <DropdownMenuSeparator />rt px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    backgroundColor: '#e5e4fc',
+                    color: '#6A64D1',
+                  }
+                : {}
+            }
           >
             <SquareKanban size={20} className="rotate-180" />
             {isCollapsed ? null : <p>Dashboard</p>}
@@ -86,6 +118,14 @@ const Sidebar = () => {
           <NavLink
             to="/clips"
             className="w-full flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    backgroundColor: '#e5e4fc',
+                    color: '#6A64D1',
+                  }
+                : {}
+            }
           >
             <Video size={20} strokeWidth="2" />
             {isCollapsed ? null : <p>Clips</p>}
@@ -93,6 +133,14 @@ const Sidebar = () => {
           <NavLink
             to="/timesheet"
             className="w-full flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    backgroundColor: '#e5e4fc',
+                    color: '#6A64D1',
+                  }
+                : {}
+            }
           >
             <Timer size={20} strokeWidth="2" />
             {isCollapsed ? null : <p>Timesheet</p>}
@@ -100,6 +148,14 @@ const Sidebar = () => {
           <NavLink
             to="/more"
             className="w-full flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    backgroundColor: '#e5e4fc',
+                    color: '#6A64D1',
+                  }
+                : {}
+            }
           >
             <MoreHorizontalIcon size={20} strokeWidth="2" />
             {isCollapsed ? null : <p>More</p>}
@@ -110,12 +166,28 @@ const Sidebar = () => {
             <NavLink
               to="/favorites"
               className="w-full flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+              style={({ isActive }) =>
+                isActive
+                  ? {
+                      backgroundColor: '#e5e4fc',
+                      color: '#6A64D1',
+                    }
+                  : {}
+              }
             >
               <Star size={20} strokeWidth="2" />
             </NavLink>
             <NavLink
               to="/spaces"
               className="w-full flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+              style={({ isActive }) =>
+                isActive
+                  ? {
+                      backgroundColor: '#e5e4fc',
+                      color: '#6A64D1',
+                    }
+                  : {}
+              }
             >
               <LucideLayoutGrid size={20} strokeWidth="2" />
             </NavLink>
@@ -150,6 +222,14 @@ const Sidebar = () => {
               <NavLink
                 to="/everything"
                 className="w-full flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        backgroundColor: '#e5e4fc',
+                        color: '#6A64D1',
+                      }
+                    : {}
+                }
               >
                 <ShipWheel size={20} strokeWidth="2" />
                 <p>Everything</p>
@@ -157,6 +237,14 @@ const Sidebar = () => {
               <NavLink
                 to="/all-spaces"
                 className="w-full flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        backgroundColor: '#e5e4fc',
+                        color: '#6A64D1',
+                      }
+                    : {}
+                }
               >
                 <LucideLayoutGrid size={20} strokeWidth="2" />
                 <p>View all Spaces</p>
@@ -164,6 +252,14 @@ const Sidebar = () => {
               <NavLink
                 to="/create-spaces"
                 className="w-full flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+                style={({ isActive }) =>
+                  isActive
+                    ? {
+                        backgroundColor: '#e5e4fc',
+                        color: '#6A64D1',
+                      }
+                    : {}
+                }
               >
                 <Plus size={20} strokeWidth="2" />
                 <p>Create Spaces</p>
@@ -177,12 +273,28 @@ const Sidebar = () => {
           <NavLink
             to="/invite"
             className="w-full flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    backgroundColor: '#e5e4fc',
+                    color: '#6A64D1',
+                  }
+                : {}
+            }
           >
             <UserRoundPlus size={20} strokeWidth="2" />
           </NavLink>
           <NavLink
             to="/help"
             className="w-full flex items-center justify-start px-2 py-2 gap-2 text-gray-600 text-sm hover:bg-gray-200 cursor-pointer rounded-md"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    backgroundColor: '#e5e4fc',
+                    color: '#6A64D1',
+                  }
+                : {}
+            }
           >
             <HelpCircle size={20} strokeWidth="2" />
           </NavLink>
@@ -192,6 +304,14 @@ const Sidebar = () => {
           <NavLink
             to="/invite"
             className="flex justify-center p-2 items-center w-full border-r-[1px] gap-1 hover:bg-gray-200 cursor-pointer"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    backgroundColor: '#e5e4fc',
+                    color: '#6A64D1',
+                  }
+                : {}
+            }
           >
             <UserRoundPlus size={15} />
             Invite
@@ -200,6 +320,14 @@ const Sidebar = () => {
           <NavLink
             to="/help"
             className="flex justify-center items-center w-full gap-1 p-2 hover:bg-gray-200 cursor-pointer"
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    backgroundColor: '#e5e4fc',
+                    color: '#6A64D1',
+                  }
+                : {}
+            }
           >
             <HelpCircle size={15} /> Help
           </NavLink>

@@ -8,7 +8,7 @@ function Filter() {
 
   return (
     <div className="w-full grid lg:grid-cols-2 md:grid-cols-1 items-start">
-      <div className="justify-center items-center flex lg:gap-1 lg:text-sm text-xs gap-0  mr-auto">
+      <div className="justify-start items-center flex lg:gap-1 lg:text-sm text-xs gap-0 flex-wrap mr-auto">
         <div className={active === 'all' ? `border-b-2 border-purple-600` : ''} onClick={() => setActive('all')}>
           <div className="py-1 rounded-md px-2 hover:bg-gray-200 cursor-pointer text-gray-600  ">All</div>
         </div>

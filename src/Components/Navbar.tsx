@@ -55,22 +55,22 @@ function Navbar() {
           New
         </div>
         <div className="text-white/[.2]"> | </div>
-        <div className="py-1 p-2 rounded-sm hover:bg-white cursor-pointer hover:bg-white/[.2] ">
+        <div className="py-1 p-2 hidden sm:block rounded-sm hover:bg-white cursor-pointer hover:bg-white/[.2] ">
           <CheckCircle2 stroke="white" strokeWidth={2} width={15} />
         </div>
-        <div className="py-1 p-2 rounded-sm hover:bg-white cursor-pointer hover:bg-white/[.2] ">
+        <div className="py-1 p-2 hidden md:block rounded-sm hover:bg-white cursor-pointer hover:bg-white/[.2] ">
           <Notebook stroke="white" strokeWidth={2} width={15} />
         </div>
-        <div className="py-1 p-2 rounded-sm hover:bg-white cursor-pointer hover:bg-white/[.2] ">
+        <div className="py-1 p-2 hidden md:block rounded-sm hover:bg-white cursor-pointer hover:bg-white/[.2] ">
           <Video stroke="white" strokeWidth={2} width={15} />
         </div>
-        <div className="py-1 p-2 rounded-sm hover:bg-white cursor-pointer hover:bg-white/[.2] ">
+        <div className="py-1 p-2 hidden md:block rounded-sm hover:bg-white cursor-pointer hover:bg-white/[.2] ">
           <AlarmClock stroke="white" strokeWidth={2} width={15} />
         </div>
-        <div className="py-1 p-2 rounded-sm hover:bg-white cursor-pointer hover:bg-white/[.2] ">
+        <div className="py-1 p-2 hidden md:block rounded-sm hover:bg-white cursor-pointer hover:bg-white/[.2] ">
           <File stroke="white" strokeWidth={2} width={15} />
         </div>
-        <div className="py-1 p-2 rounded-sm hover:bg-white cursor-pointer hover:bg-white/[.2] ">
+        <div className="py-1 p-2 hidden md:block rounded-sm hover:bg-white cursor-pointer hover:bg-white/[.2] ">
           <LucideLayoutGrid stroke="white" strokeWidth={2} width={15} />
         </div>
         <DropdownMenu>
