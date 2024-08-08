@@ -9,9 +9,7 @@ import {
   ArchiveIcon,
   Copy,
   File,
-  HelpCircle,
   Link,
-  LogOut,
   MoreHorizontalIcon,
   MoveLeft,
   Pen,
@@ -24,7 +22,7 @@ import {
 import { useState } from 'react';
 
 function TableItem({ selected }: { selected: boolean }) {
-  const [isSelected, setIsSelected] = useState<boolean>(false);
+  const [isSelected] = useState<boolean>(false);
 
   return (
     <tr

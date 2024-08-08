@@ -9,7 +9,7 @@ function DocLayout() {
     <div className="w-[100%] h-full  overflow-hidden">
       <TopSection />
       <div className="p-10 flex flex-col gap-5 overflow-x-scroll ">
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-3 w-full ">
+        <div className="grid lg:grid-cols-3 grid-cols-2 gap-3 w-full ">
           <Card title="Recent" description="Your Recently Open docs will show here" />
           <Card title="Favorites" description="Your Favorites Docs will show here." />
           <Card title="Created by Me" description="Docs Created by you will be shown here." />
