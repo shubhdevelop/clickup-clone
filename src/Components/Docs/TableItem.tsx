@@ -22,22 +22,22 @@ import {
 import { useState } from 'react';
 
 function TableItem({ selected }: { selected: boolean }) {
-  const [isSelected] = useState<boolean>(false);
+  const [isSelected, setIsSelected] = useState<boolean>(false);
 
   return (
     <tr
-      className={`flex justify-between items-center flex-row text-xs  text-gray-600 border-y-[.5px] py-2 cursor-pointer  ${isSelected || selected ? 'bg-purple-300/[.2] border-purple-300' : 'hover:bg-gray-100'}`}
+      className={`flex justify-between items-center flex-row text-xs  text-gray-600 border-y-[.5px] py-2 cursor-pointer  ${isSelected || selected ? 'bg-purple-300/[.3git ] border-purple-300' : 'hover:bg-gray-100'} min-w-20  bg-white`}
     >
-      {/* <td className=" text-left font-normal  py-2 pl-6 cursor-pointer border-y-none flex absolute justify-center items-center ">
+      <td className=" text-left font-normal  py-2 pl-6 cursor-pointer border-y-none flex  justify-center items-center ">
         <input
           type="checkbox"
           checked={isSelected || selected}
           name=""
           id=""
-          className="relative right-8 z-10 accent-purple-300    bg-gray-100 border-gray-300 rounded-lg "
+          className="  accent-purple-300 absolute left-[10px] bg-gray-100 border-gray-300 rounded-lg "
           onClick={() => setIsSelected((prev) => !prev)}
         />
-      </td> */}
+      </td>
       <td className="w-full text-left font-normal pl-2  flex justify-start  gap-1 items-center">
         <File size={15} /> <p>Docs</p>
       </td>

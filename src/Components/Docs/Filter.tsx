@@ -8,7 +8,7 @@ function Filter() {
 
   return (
     <div className="w-full flex justify-between items-center">
-      <div className="justify-center items-center flex gap-1 text-sm">
+      <div className="justify-center items-center flex lg:gap-1 lg:text-sm text-xs gap-0">
         <div className={active === 'all' ? `border-b-2 border-purple-600` : ''} onClick={() => setActive('all')}>
           <div className="py-1 rounded-md px-2 hover:bg-gray-200 cursor-pointer text-gray-600  ">All</div>
         </div>

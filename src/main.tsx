@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
 import './index.css';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import UnderConstruction from './Components/UnderConstruction.tsx';
@@ -12,7 +11,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<MainLayout />}>
       <Route path="*" element={<UnderConstruction />} />
       <Route path="/docs" element={<DocLayout />} />
-      <Route index element={<App />} />
+      <Route index element={<UnderConstruction />} />
     </Route>,
   ),
 );

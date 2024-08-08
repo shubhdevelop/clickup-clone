@@ -2,7 +2,7 @@ import { ChevronDown, File, Search } from 'lucide-react';
 
 function TopSection() {
   return (
-    <div className=" flex justify-between items-center w-full px-1  text-sm border-b-[1px]  pl-10 pr-1">
+    <div className=" flex justify-between items-center w-full px-1  text-sm border-b-[1px]  pl-10 pr-1 sticky top-0 bg-white">
       <div className="flex justify-center items-center gap-2 font-light">
         <File size={15} />
         <p>Docs</p>
