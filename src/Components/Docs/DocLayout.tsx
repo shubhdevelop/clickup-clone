@@ -23,7 +23,7 @@ function DocLayout() {
               or <span className="underline">import from Confluence.</span>
             </p>
           </div>
-          <div className="flex flex-row justify-center items-center gap-2 wrap">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-2 wrap">
             <WikiItem
               title="Company wiki"
               description="All-in-one wiki"

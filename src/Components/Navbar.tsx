@@ -38,7 +38,7 @@ function Navbar() {
         width={15}
         height={15}
       />
-      <div className="flex justify-between items-start lg:w-[500px] w-[300px] relative  leg:left-[100px] bg-white/[.1] rounded-md  text-white cursor-pointer">
+      <div className="sm:flex justify-between items-start hidden lg:w-[500px] w-[300px] relative  leg:left-[100px] bg-white/[.1] rounded-md  text-white cursor-pointer">
         <div className="flex justify-start items-center w-full px-2 py-[2px] gap-2 hover:bg-white/[.2] rounded-l-md">
           <Search width={15} strokeWidth={2} /> Search....{' '}
         </div>

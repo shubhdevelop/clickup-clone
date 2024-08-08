@@ -26,7 +26,7 @@ function TableItem({ selected }: { selected: boolean }) {
 
   return (
     <tr
-      className={`flex justify-between items-center flex-row text-xs  text-gray-600 border-y-[.5px] py-2 cursor-pointer  ${isSelected || selected ? 'bg-purple-300/[.3git ] border-purple-300' : 'hover:bg-gray-100'} min-w-20  bg-white`}
+      className={`flex justify-between items-center flex-row text-xs  text-gray-600 border-y-[.5px] py-2 cursor-pointer  ${isSelected || selected ? 'bg-purple-300/[.3] border-purple-300' : 'hover:bg-gray-100'} min-w-20  bg-white`}
     >
       <td className=" text-left font-normal  py-2 pl-6 cursor-pointer border-y-none flex  justify-center items-center ">
         <input
