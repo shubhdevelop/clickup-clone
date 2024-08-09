@@ -33,7 +33,7 @@ const Sidebar = () => {
       <div>
         <div className="flex justify-between h-10 items-center w-full px-1 py-1 text-sm border-b-[1px] ">
           {isCollapsed ? (
-            <div className="p-3 my-1 rounded-sm bg-green-500 h-5 w-5 flex justify-center items-center gap-1  cursor-pointer">
+            <div className="p-3 my-1 rounded-sm bg-green-500/[.3] h-5 w-5 flex justify-center items-center gap-1  cursor-pointer">
               S
             </div>
           ) : (
@@ -194,26 +194,26 @@ const Sidebar = () => {
           </div>
         ) : (
           <div className=" mt-2">
-            <div className="flex justify-between items-center cursor-pointer">
-              <div className="flex justify-center items-center text-xs font-bold text-gray-600 gap-1 px-2 py-2">
+            <div className="flex group justify-between items-center cursor-pointer">
+              <div className="  flex justify-center items-center text-xs font-bold text-gray-600 gap-1 px-2 py-2">
                 Favorites <ChevronRight size={15} />
               </div>
-              <div className="p-2 rounded-md hover:bg-gray-500/[.2] cursor-pointer">
+              <div className="p-2 group-hover:block hidden rounded-md hover:bg-gray-500/[.2] cursor-pointer">
                 <PinIcon size={15} />
               </div>
             </div>
-            <div className="flex justify-between  cursor-pointer items-center">
+            <div className=" group flex justify-between  cursor-pointer items-center">
               <div className="flex justify-center items-center text-xs font-bold text-gray-600 gap-1 px-2 py-2">
                 Spaces
               </div>
               <div className="flex gap-2">
-                <div className="p-2 rounded-md hover:bg-gray-500/[.2] cursor-pointer">
+                <div className="p-2 group-hover:block hidden rounded-md hover:bg-gray-500/[.2] cursor-pointer">
                   <MoreHorizontalIcon size={15} />
                 </div>{' '}
-                <div className="p-2 rounded-md hover:bg-gray-500/[.2] cursor-pointer">
+                <div className="p-2 group-hover:block hidden rounded-md hover:bg-gray-500/[.2] cursor-pointer">
                   <Search size={15} />
                 </div>{' '}
-                <div className="p-2 rounded-md hover:bg-gray-500/[.2] cursor-pointer">
+                <div className="p-2 group-hover:block hidden rounded-md hover:bg-gray-500/[.2] cursor-pointer">
                   <Plus size={15} />
                 </div>
               </div>

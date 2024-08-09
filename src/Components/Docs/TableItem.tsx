@@ -17,6 +17,7 @@ import {
   PersonStandingIcon,
   Plus,
   Share2Icon,
+  Star,
   Trash2,
   Users,
   Wand2,
@@ -56,7 +57,7 @@ function TableItem({ data }: { data: Data | undefined }) {
   return (
     <tbody>
       <tr
-        className={`flex justify-between items-center flex-row text-xs  text-gray-600 border-y-[.5px] py-2 cursor-pointer  ${isInSelected ? 'bg-purple-300/[.4] border-purple-300' : 'hover:bg-gray-100'} min-w-20  bg-white`}
+        className={` doc-name flex justify-between items-center flex-row text-xs  text-gray-600 border-y-[.5px] py-2 cursor-pointer  ${isInSelected ? 'bg-purple-200/[.5] border-purple-300' : 'hover:bg-gray-100'} min-w-20  bg-white`}
       >
         <td className=" text-left font-normal  py-2 pl-6 cursor-pointer border-y-none flex  justify-center items-center ">
           <input
@@ -74,8 +75,17 @@ function TableItem({ data }: { data: Data | undefined }) {
             }}
           />
         </td>
-        <td className="w-full text-left  pl-2  flex justify-start  gap-1 items-center font-semibold cursor-pointer">
-          <File size={15} /> <RLink to={data._id}>{data.title}</RLink>
+        <td className="w-full group text-left  pl-2  flex justify-start  gap-2 items-center font-semibold cursor-pointer">
+          <File size={15} /> <RLink to={data._id}>{data.title}</RLink>{' '}
+          <div className="p-[3px] group-hover:block hidden bg-white rounded-md border-[.2px] hover:bg-gray-500/[.3] ">
+            <Link size={13} strokeWidth={3} />
+          </div>
+          <div className="p-[3px] group-hover:block hidden bg-white rounded-md border-[.2px] hover:bg-gray-500/[.3] ">
+            <Star size={13} strokeWidth={3} />
+          </div>
+          <div className="p-[3px] group-hover:block hidden rounded-md border-[.2px] hover:bg-gray-500/[.3]  bg-white">
+            <Pen size={13} strokeWidth={3} />
+          </div>
         </td>
         <td className="w-full text-left font-normal pl-2  flex justify-start  gap-1 items-center">
           <Users size={15} /> {data.location}
