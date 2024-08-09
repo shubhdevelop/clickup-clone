@@ -6,7 +6,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu';
+import { DocState } from '@/context/context';
 import { CaretDownIcon } from '@radix-ui/react-icons';
+import axios from 'axios';
 import {
   AlarmClock,
   BellDot,
@@ -30,6 +32,21 @@ import {
 } from 'lucide-react';
 
 function Navbar() {
+  const { dispatch } = DocState();
+  function createDoc() {
+    axios({
+      method: 'post',
+      url: 'http://localhost:3000/api/v1/docs/new',
+      data: {
+        title: 'Untitled',
+        docContent: {
+          h1: 'Hello there',
+          p: 'Nice to meet you how you doing?',
+        },
+        userId: '66b496aa223bd084bd9e6195',
+      },
+    }).then((res) => dispatch({ type: 'ADD', payload: res.data.data }));
+  }
   return (
     <nav className="w-full h-10 px-4 bg-[#323452] flex flex-row text-sm justify-between items-center py-1">
       <img
@@ -50,7 +67,10 @@ function Navbar() {
         <button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-2 py-1 rounded-sm  cursor-pointer text-white">
           Upgrade
         </button>
-        <div className="flex justify-center items-center py-1 px-2 gap-1 hover:bg-white/[.2]  cursor-pointer opacity-1 rounded-sm text-white">
+        <div
+          className="flex justify-center items-center py-1 px-2 gap-1 hover:bg-white/[.2]  cursor-pointer opacity-1 rounded-sm text-white"
+          onClick={() => createDoc()}
+        >
           <PlusCircle stroke="white" strokeWidth={2} width={15} />
           New
         </div>

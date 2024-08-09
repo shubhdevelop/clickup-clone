@@ -1,11 +1,7 @@
 import { FilterIcon, Search } from 'lucide-react';
-import { useState } from 'react';
+import { CurrFilter } from './DocLayout';
 
-type CurrFilter = 'all' | 'my_docs' | 'shared' | 'private' | 'workspace' | 'assigned' | 'archived';
-
-function Filter() {
-  const [active, setActive] = useState<CurrFilter>('all');
-
+function Filter({ active, setActive }: { active: CurrFilter; setActive: (arg0: CurrFilter) => void }) {
   return (
     <div className="w-full grid lg:grid-cols-2 md:grid-cols-1 items-start">
       <div className="justify-start items-center flex lg:gap-1 lg:text-sm text-xs gap-0 flex-wrap mr-auto">

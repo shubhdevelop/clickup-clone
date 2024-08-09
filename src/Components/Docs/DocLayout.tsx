@@ -1,10 +1,39 @@
+import { useEffect, useState } from 'react';
 import Card from './Card';
 import Filter from './Filter';
 import Table from './Table';
 import TopSection from './TopSection';
 import WikiItem from './WikiItem';
+import axios from 'axios';
+import { DocState } from '@/context/context';
+import MultiSelect from '../MultiSelect';
+
+export type CurrFilter = 'all' | 'my_docs' | 'shared' | 'private' | 'workspace' | 'assigned' | 'archived';
+export type Data = {
+  _id: string;
+  title: string;
+  archived: boolean;
+  private: boolean;
+  location: string;
+  content: object;
+  isPublished: boolean;
+  owner: string;
+  contributor: string[];
+  createdAt: string;
+  updatedAt: string;
+};
 
 function DocLayout() {
+  const [active, setActive] = useState<CurrFilter>('all');
+
+  const { dispatch } = DocState();
+
+  useEffect(() => {
+    axios.get(`http://localhost:3000/api/v1/docs/66b496aa223bd084bd9e6195`).then((res) => {
+      dispatch({ type: 'SET_DATA', payload: res.data.data });
+    });
+  }, [active, dispatch]);
+
   return (
     <div className="w-[100%] h-full  overflow-y-scroll">
       <TopSection />
@@ -46,9 +75,10 @@ function DocLayout() {
             />
           </div>
         </div>
-        <Filter />
-        <Table />
+        <Filter active={active} setActive={setActive} />
+        <Table filter={active} />
       </div>
+      <MultiSelect />
     </div>
   );
 }

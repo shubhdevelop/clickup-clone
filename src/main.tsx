@@ -5,12 +5,14 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import UnderConstruction from './Components/UnderConstruction.tsx';
 import MainLayout from './Components/MainLayout.tsx';
 import DocLayout from './Components/Docs/DocLayout.tsx';
+import DocViewer from './Components/Docs/DocViewer.tsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
       <Route path="*" element={<UnderConstruction />} />
       <Route path="/docs" element={<DocLayout />} />
+      <Route path="/docs/:docId" element={<DocViewer />} />
       <Route index element={<UnderConstruction />} />
     </Route>,
   ),

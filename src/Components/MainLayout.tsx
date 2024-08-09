@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Sidebar from './SiderBar/Sidebar';
+import Context from '@/context/context';
 
 function MainLayout() {
   return (
@@ -8,7 +9,9 @@ function MainLayout() {
       <Navbar />
       <div className="h-[calc(100vh-3rem)] max-w-full flex flex-row justify-start">
         <Sidebar />
-        <Outlet />
+        <Context>
+          <Outlet />
+        </Context>
       </div>
       {/* <Footer /> */}
     </div>
