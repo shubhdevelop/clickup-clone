@@ -14,7 +14,7 @@ export const docReducer = (state: State, action) => {
       };
       break;
     case 'DELETE':
-      return { ...state, selected: [], data: [...state.data.filter((el) => action.payload.includes(el._id))] };
+      return { ...state, selected: [], data: [...state.data.filter((el) => !action.payload.includes(el._id))] };
     case 'UPDATE':
       return {
         ...state,

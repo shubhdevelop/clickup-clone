@@ -32,7 +32,7 @@ function TableItem({ data }: { data: Data | undefined }) {
   function handleDelete(docIds) {
     axios({
       method: 'delete',
-      url: 'http://localhost:3000/api/v1/docs/delete',
+      url: 'https://clickup-server.onrender.com/api/v1/docs/delete',
       data: {
         docIds: docIds,
         userId: '66b496aa223bd084bd9e6195',
@@ -43,7 +43,7 @@ function TableItem({ data }: { data: Data | undefined }) {
   function handleUpdate(updateData, docIds) {
     axios({
       method: 'patch',
-      url: 'http://localhost:3000/api/v1/docs/',
+      url: 'https://clickup-server.onrender.com/api/v1/docs/',
       data: {
         docIds: docIds,
         updateData: updateData,

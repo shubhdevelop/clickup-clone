@@ -6,7 +6,7 @@ type Props = {
 
 export default function WikiItem({ title, description, src }: Props) {
   return (
-    <div className="flex w-full p-3 rounded-xl gap-2 border-[1px] hover:bg-gray-100 cursor-pointer">
+    <div className="flex w-full p-3 rounded-xl gap-2 border-[1px] hover:bg-gray-100 cursor-pointer shadow-md">
       <div>
         <img src={src} alt={`${title} svg}`} />
       </div>

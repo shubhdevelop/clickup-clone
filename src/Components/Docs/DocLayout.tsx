@@ -29,7 +29,7 @@ function DocLayout() {
   const { dispatch } = DocState();
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/v1/docs/66b496aa223bd084bd9e6195`).then((res) => {
+    axios.get(`https://clickup-server.onrender.com/api/v1/docs/66b496aa223bd084bd9e6195`).then((res) => {
       dispatch({ type: 'SET_DATA', payload: res.data.data });
     });
   }, [active, dispatch]);
@@ -43,7 +43,7 @@ function DocLayout() {
           <Card title="Favorites" description="Your Favorites Docs will show here." />
           <Card title="Created by Me" description="Docs Created by you will be shown here." />
         </div>
-        <div className="w-full rounded-xl border-[1px] border-gray-200 p-4 ">
+        <div className="w-full rounded-xl border-[1px] border-gray-200 p-4  shadow-md">
           <div className="flex flex-row gap-1 justify-between items-center my-4">
             <p className="font-semibold"> Create first wiki</p>
             <p className="text-xs text-gray-600">

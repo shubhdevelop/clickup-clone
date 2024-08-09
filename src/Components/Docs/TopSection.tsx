@@ -7,7 +7,7 @@ function TopSection() {
   function createDoc() {
     axios({
       method: 'post',
-      url: 'http://localhost:3000/api/v1/docs/new',
+      url: 'https://clickup-server.onrender.com/api/v1/docs/new',
       data: {
         title: 'Untitled',
         docContent: {
