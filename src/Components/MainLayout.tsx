@@ -6,13 +6,14 @@ import Context from '@/context/context';
 function MainLayout() {
   return (
     <div className="max-h-vh">
-      <Navbar />
-      <div className="h-[calc(100vh-3rem)] max-w-full flex flex-row justify-start">
-        <Sidebar />
-        <Context>
+      <Context>
+        <Navbar />
+        <div className="h-[calc(100vh-3rem)] max-w-full flex flex-row justify-start">
+          <Sidebar />
+
           <Outlet />
-        </Context>
-      </div>
+        </div>
+      </Context>
       {/* <Footer /> */}
     </div>
   );
