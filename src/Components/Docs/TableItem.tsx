@@ -83,7 +83,10 @@ function TableItem({ data }: { data: Data | undefined }) {
           <div className="p-[3px] group-hover:block hidden bg-white rounded-md border-[.2px] hover:bg-gray-500/[.3] ">
             <Star size={13} strokeWidth={3} />
           </div>
-          <div className="p-[3px] group-hover:block hidden rounded-md border-[.2px] hover:bg-gray-500/[.3]  bg-white">
+          <div
+            className="p-[3px] group-hover:block hidden rounded-md border-[.2px] hover:bg-gray-500/[.3]  bg-white"
+            onClick={() => handleUpdate({ title: 'updated title' }, [data._id])}
+          >
             <Pen size={13} strokeWidth={3} />
           </div>
         </td>
