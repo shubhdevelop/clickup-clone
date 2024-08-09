@@ -35,7 +35,7 @@ function MultiSelect() {
 
   return (
     <div
-      className={`w-[70%] ${state.selected.length == 0 ? 'hidden' : ''} p-2 absolute bottom-10 left-[15%] mx-auto  z-50 bg-black/[.9] flex justify-between items-center rounded-md`}
+      className={`w-[70%] ${state.selected.length == 0 ? 'hidden' : ''} text-xs p-2 absolute bottom-10 left-[15%] mx-auto  z-50 bg-black/[.9] flex md:justify-around lg:justify-between items-center rounded-md justify-center flex-wrap gap-2`}
     >
       <div
         className="text-white/[.8] flex justify-center items-center border-[.2px] border-white/[.5] p-1 gap-1 text-sm rounded-md cursor-pointer"
@@ -53,7 +53,7 @@ function MultiSelect() {
             )
           }
         >
-          <ShieldOff size={15} color="white" /> Make Private
+          <ShieldOff size={15} color="white" /> Private
         </div>
         <div
           className="text-white/[.8] flex justify-center items-center  p-1 gap-2 text-sm rounded-md cursor-pointer"
